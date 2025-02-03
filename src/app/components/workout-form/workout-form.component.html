@@ -1,0 +1,80 @@
+<mat-card class="shadow-lg rounded-2xl p-4 max-w-lg mx-auto mt-8">
+  <mat-card-header>
+    <mat-card-title class="text-xl font-semibold">Add Workout</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form
+      [formGroup]="workoutForm"
+      (ngSubmit)="onSubmit()"
+      class="flex flex-col gap-4 p-4"
+    >
+      <!-- User Name Input -->
+      <mat-form-field class="w-full">
+        <mat-label>User Name</mat-label>
+        <span matPrefix class="mr-2">
+          <mat-icon class="text-gray-600">person</mat-icon>
+        </span>
+        <input
+          matInput
+          formControlName="userName"
+          placeholder="Enter user name"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2"
+        />
+        <mat-error *ngIf="workoutForm.get('userName')?.errors?.['required']">
+          User name is required
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Workout Type Select -->
+      <mat-form-field class="w-full">
+        <mat-label>Workout Type</mat-label>
+        <span matPrefix class="mr-2">
+          <mat-icon class="text-gray-600">fitness_center</mat-icon>
+        </span>
+        <mat-select formControlName="workoutType">
+          <mat-option *ngFor="let type of workoutTypes" [value]="type.value">
+            {{ type.label }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="workoutForm.get('workoutType')?.errors?.['required']">
+          Workout type is required
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Minutes Input -->
+      <mat-form-field class="w-full">
+        <mat-label>Minutes</mat-label>
+        <span matPrefix class="mr-2">
+          <mat-icon class="text-gray-600">timer</mat-icon>
+        </span>
+        <input
+          matInput
+          type="number"
+          formControlName="minutes"
+          placeholder="Enter duration"
+          min="1"
+          max="300"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2"
+        />
+        <mat-error *ngIf="workoutForm.get('minutes')?.errors?.['required']">
+          Duration is required
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Submit Button -->
+      <div class="flex justify-end mt-4">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!workoutForm.valid"
+          class="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md disabled:bg-gray-300"
+        >
+          <mat-icon>add</mat-icon>
+          Add Workout
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

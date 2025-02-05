@@ -1,7 +1,7 @@
 # **Workout Tracker SPA**  
 
 ## **Overview**  
-This is a single-page application (SPA) built using **Angular 14+** that allows users to track their workouts. Users can enter their **name**, select a **workout type**, and specify the **duration** of their workout. The app provides features such as **search**, **filtering**, **pagination**, and **data persistence using localStorage**. Additionally, it includes **charts to visualize workout progress**.  
+This is a single-page application (SPA) built using **Angular 19** that allows users to track their workouts. Users can enter their **name**, select a **workout type**, and specify the **duration** of their workout. The app provides features such as **search**, **filtering**, **pagination**, and **data persistence using localStorage**. Additionally, it includes **charts to visualize workout progress**.  
 
 ## **Features**  
 
@@ -55,3 +55,64 @@ npm install
 ```bash
 ng serve
 ```
+
+### **4. Run tests**
+```bash
+npm run test:cov
+```
+
+## **Project Stucture**
+```
+📦 healthT
+├─ .editorconfig
+├─ .gitignore
+├─ .postcssrc.json
+├─ .vscode
+│  ├─ extensions.json
+│  ├─ launch.json
+│  └─ tasks.json
+├─ Images
+│  ├─ Chart.png
+│  ├─ Coverage.png
+│  ├─ UserInput.png
+│  └─ UserList.png
+├─ README.md
+├─ angular.json
+├─ package-lock.json
+├─ package.json
+├─ public
+│  └─ favicon.ico
+├─ src
+│  ├─ app
+│  │  ├─ app-routing.module.ts
+│  │  ├─ app.component.css
+│  │  ├─ app.component.html
+│  │  ├─ app.component.spec.ts
+│  │  ├─ app.component.ts
+│  │  ├─ app.config.ts
+│  │  ├─ app.module.ts
+│  │  ├─ components
+│  │  │  ├─ workout-chart
+│  │  │  │  ├─ workout-chart.component.css
+│  │  │  │  ├─ workout-chart.component.html
+│  │  │  │  └─ workout-chart.component.ts
+│  │  │  ├─ workout-form
+│  │  │  │  ├─ workout-form.component.html
+│  │  │  │  └─ workout-form.component.ts
+│  │  │  └─ workout-list
+│  │  │     ├─ workout-list.component.html
+│  │  │     ├─ workout-list.component.spec.ts
+│  │  │     └─ workout-list.component.ts
+│  │  ├─ models
+│  │  │  └─ workout.model.ts
+│  │  └─ services
+│  │     ├─ workout.service.spec.ts
+│  │     └─ workout.service.ts
+│  ├─ index.html
+│  ├─ main.ts
+│  └─ styles.css
+├─ tsconfig.app.json
+├─ tsconfig.json
+└─ tsconfig.spec.json
+```
+

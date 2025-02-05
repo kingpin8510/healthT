@@ -139,6 +139,6 @@ npm run test:cov
 - Generates **workout summaries**.
 
 ## **Possible Improvements**
--User authentication: Adding login/signup functionality.
--Workout history tracking: Allowing users to view past workout trends.
--Export data: Providing an option to export workout data as CSV.
+- User authentication: Adding login/signup functionality.
+- Workout history tracking: Allowing users to view past workout trends.
+- Export data: Providing an option to export workout data as CSV.

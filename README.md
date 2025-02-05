@@ -116,3 +116,29 @@ npm run test:cov
 └─ tsconfig.spec.json
 ```
 
+## 📂 **Components Overview**  
+
+### 📌 `Form Component`
+- Provides a **form** to log new workouts.
+- Uses Angular `ReactiveFormsModule` for **validation**.
+- Submits data to `WorkoutService`.
+
+### 📌 `List Component`
+- Displays **workout summaries** in a **table**.
+- Supports **search**, **filters**, and **pagination**.
+- Fetches and updates data from `WorkoutService`.
+
+### 📌 `Charts Component`
+- **Visualizes workout data** using charts.
+- Displays **total workout minutes per user**.
+- Uses `Chart.js` (or alternative).
+
+### 📌 `WorkoutService`
+- **Manages workout data** via **localStorage**.
+- Provides **real-time data updates** using `BehaviorSubject`.
+- Generates **workout summaries**.
+
+## **Possible Improvements**
+-User authentication: Adding login/signup functionality.
+-Workout history tracking: Allowing users to view past workout trends.
+-Export data: Providing an option to export workout data as CSV.
